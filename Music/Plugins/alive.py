@@ -43,7 +43,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@app.on_message(filters.command(["alive", "alive@Tg_Vc_00_Bot"]))
+@app.on_message(filters.command(["malive", "malive@Tg_Vc_00_Bot"]))
 async def alive(client, message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
@@ -51,13 +51,13 @@ async def alive(client, message):
     await client.send_photo(message.chat.id,
         photo=f"{BOT_IMG}",
         caption=f"""**Holla {message.from_user.mention()}.**
-㊙️ **I'm Working Properly**
-㊙️ **Bot : Latest**
-㊙️ **Bot Info : Online**
-㊙️ **Uptime : `{uptime}`**
-㊙️ **Pyrogram Version : `{pyrover}`**
-㊙️ **PyTgCalls Version: `{pytover.__version__}`**
-㊙️ **Using New Version**
+😑 **I'm Working Properly**
+😑 **Bot : Latest**
+😑 **Bot Info : Online**
+😑 **Uptime : `{uptime}`**
+😑 **Pyrogram Version : `{pyrover}`**
+😑 **PyTgCalls Version: `{pytover.__version__}`**
+😑 **Using New Version**
 **Thanks For Using Me 🚀**""",
         reply_markup=InlineKeyboardMarkup(
             [
